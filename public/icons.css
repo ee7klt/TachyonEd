@@ -1,0 +1,72 @@
+@font-face {
+	font-family: 'icomoon';
+	src:url('fonts/icomoon.eot');
+	src:url('fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+		url('fonts/icomoon.woff') format('woff'),
+		url('fonts/icomoon.ttf') format('truetype'),
+		url('fonts/icomoon.svg#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+	font-family: 'icomoon';
+	content: attr(data-icon);
+	speak: none;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="icon-"] {
+*/
+.icon-bookmark, .icon-user, .icon-chevron-right, .icon-list-alt, .icon-group, .icon-desktop, .icon-star, .icon-code, .icon-ok, .icon-facebook, .icon-twitter {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+.icon-bookmark:before {
+	content: "\f02e";
+}
+.icon-user:before {
+	content: "\f007";
+}
+.icon-chevron-right:before {
+	content: "\f054";
+}
+.icon-list-alt:before {
+	content: "\f022";
+}
+.icon-group:before {
+	content: "\f0c0";
+}
+.icon-desktop:before {
+	content: "\f108";
+}
+.icon-star:before {
+	content: "\f005";
+}
+.icon-code:before {
+	content: "\e000";
+}
+.icon-ok:before {
+	content: "\f00c";
+}
+.icon-facebook:before {
+	content: "\f09a";
+}
+.icon-twitter:before {
+	content: "\f099";
+}

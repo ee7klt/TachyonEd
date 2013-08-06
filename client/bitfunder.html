@@ -1,0 +1,264 @@
+<head>
+  <title>bitfunder</title>
+
+  <link rel="stylesheet" href="/icons.css" type="text/css" />
+  <script src="https://checkout.stripe.com/v2/checkout.js"></script>
+
+</head>
+
+<body>
+	<div id='global-wrap'>
+		{{> global}}
+	</div>
+
+</body>
+
+<template name="global">
+
+	{{>modal}}
+
+	{{>header}}
+
+	<div id='content-wrap'>
+
+			<div id='tweet-button-wrap'>
+				<ul>
+					<li><span id='tweet-button'></span></li>
+					<li><span id='tweet-text'>Hey! You can tweet this to receive this crowdfunder's full documented source code.</span></li>
+				</ul>
+			</div>
+
+			<div class='content-block'>
+
+				<div id='head-wrap'>
+
+					<div id='main-header'>Learning should be fun. Seriously.</div>
+
+					<div id='sub-header'>
+						Introducing note-taking for the online education era.
+					</div>
+
+					<div id='about-wrap'>
+						<a href='https://www.stanford.edu' target='_new'><img src='https://i.imgur.com/yYhH7cs.png'></a>
+						<a href='https://www.coursera.org' target='_new'><img src='https://i.imgur.com/UDigsxr.png'></a>
+					</div>
+
+					<div id='sub-description'>
+						Let's stop pretending we remember everything.
+					</div>
+
+				</div>
+
+				<div id='top'>
+
+						<a href='https://onote.herokuapp.com' target='_new'>Onote</a> is a note-taking and course management platform for online students that works on all devices. It was built as part of the Stanford/Coursera  <a href='https://class.coursera.org/startup-001/class/index' target='_new'>Startup Engineering</a> course. With Onote, you can already take synchronized notes on video lectures, review them, share them, and see what notes others are taking. <br>And with your help, we can make it do so much more.
+
+				</div>
+
+				<div id='screens'>
+
+					<a href='https://i.imgur.com/ARWQynQ.png' target='_new'><img src='https://i.imgur.com/ARWQynQ.png'></a>
+					
+					<a href='https://i.imgur.com/kIxbbK2.png' target='_new'><img src='https://i.imgur.com/kIxbbK2.png'></a>
+
+				</div>
+
+				<h1>Roadmap</h1>
+
+				<div id='ins'>
+					<div id='hd'>Click on any feature below to back it.</div> 
+					You'll be recognized as a Feature Contributor on the About Page for showing your support. <br>Contributing $49 or more makes you a Feature Owner too — you'll be recognized and get early beta access.
+				</div>
+
+				<ul class='feature-grid'>
+					{{> feature_grid}}
+				</ul>
+
+				<h1>More Rewards</h1>
+
+				<ul class='feature-grid'>
+					{{> reward_grid}}
+				</ul>
+
+
+				<h1>Product Analysis</h1>
+
+				<div id='narrow'>
+
+					<h2>Do people take notes?</h2>
+					<p>Note-taking is a type of involved learning. It helps transcribe short-term memory to long-term memory and is useful for later review and better grades. Evernote and other note-taking applications have proven that note-taking is a popular activity.</p>
+
+					<h2>Exactly what problem does Onote solve? (value proposition)</h2>
+					<p>As online education grows at exponential rates, video has clearly proven itself as the medium of choice to both teach and learn. Onote aims to enrich video lectures by providing a platform where students can take synchronized notes, share them, review them, ask and answer questions, search lectures, and manage and discover courses.</p>
+
+					<h2>For whom does Onote solve that problem? (target market)</h2>
+					<p>Anyone who watches video lectures online. This includes high school and college students as well as young professionals looking to take up a new skill.</p>
+
+					<h2>How big is the opportunity? (market size)</h2>
+					<p>The market for online education is currently at $96 billion and is expected to grow by 20% a year for the foreseeable future. As credential systems become more established, <i>half of US students will get their education online in the next decade</i>. Five out of six online students are employed, which points to high purchasing power.
+					</p>
+
+					<h2>What alternatives are out there? (competitive landscape)</h2>
+					<p>Note-taking applications such as Google Docs, Evernote, and Microsoft Word serve as alternatives, but they are not adapted to video in-context note-taking. Onote's synchronized note-taking, course discovery, search, and review tools provide a superior experience.</p>
+
+					<h2>Why now? (market window)</h2>
+					<p>Online education is booming and video is the medium of choice to distribute courses. And a billion people from third world countries, a perfect market for Western online education, are getting an Internet connection in the next decade.</p>
+
+					<h2>How will we get Onote to market? (go-to-market strategy)</h2>
+					<p>Using the funds collected here and through promotions in online student communities such as Cousera and Udacity. The product has both individual (personal note-taking) and social (note-sharing, course discovery) values, which means it can be used as a standalone app. Building critical mass is not a prerequisite to further acquiring users (unlike purely social apps).</p>
+
+					<h2>How will we measure success for this product? (metrics strategy)</h2>
+					<p>User/customer satisfaction is our number one metric for success.</p>
+
+					<p>More questions? <a href='https://twitter.com/albste' target='_new'>Contact me on Twitter</a></p>
+
+					<div id='footer'>Albert Stephan &copy; 2013. All rights reserved. Users obtaining this software have the right to run it for any legal purpose, study how it works, and adapt it to their own needs, but cannot redistribute this software (a.k.a. all code built by the author on top of the Meteor framework) in whole or in part.</div>
+
+				</div>
+
+			</div>
+
+	</div>
+
+
+</template>
+
+<template name='header'>
+
+	<div id='header-wrap'> <!-- fixed -->
+
+		<div id='logo-wrap'>
+
+			<span id='logo'>Onote</span>
+			<span id='dollar-progress'>${{format_num total_pledged}}<span> pledged of $100,000 goal</span></span>
+
+		</div>
+
+		<ul id='nav'>
+			<li><span id='contribute-button' class='green-button small-button'>{{> pledged_amount}} Back This Project</span></li>			
+		</ul>
+
+	</div>
+
+</template>
+
+<template name='pledged_amount'>
+
+	<span class='total-dollar-amount'>
+		{{#if amount}}
+			${{format_num amount}}
+		{{else}}
+			<span aria-hidden="true" class="icon-chevron-right"></span>
+		{{/if}}
+	</span>
+
+</template>
+
+<template name='modal'>
+	<div class="md-modal md-effect-8" id="modal-email">
+		<div class="md-content">
+
+			{{#unless pledged}}
+
+				<div id='modal-wrap'>
+
+					$ <input type='text' class='email-input number' id='free-amount' value='5'>
+					
+				</div>
+
+			{{/unless}}
+
+				<div id='modal-wrap'>
+
+					<input type='text' class='email-input' id='email-input' placeholder='Your email...'><a class='green-button email-continue' id='email-continue'><span aria-hidden="true" class="icon-chevron-right"></span> &nbsp; Continue</a>
+
+				</div>
+
+			<div id='close-modal'>
+				{{#if pledged}}
+					You'll receive your receipt and rewards at this address. 
+				{{/if}}
+				<a class='md-close'>Close</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="md-modal md-effect-8" id="modal-thanks">
+		<div class="md-content">
+			<div id='modal-wrap'>Thanks! You'll receive your rewards shortly.</div>
+			<div id='close-modal'><a class='md-close'>Close</a></div>
+		</div>
+	</div>
+
+	<div class="md-modal md-effect-8" id="modal-charging">
+		<div class="md-content">
+			<div id='modal-wrap'>Transaction in progress...</div>
+		</div>
+	</div>
+
+	<div class="md-modal md-effect-8" id="modal-error">
+		<div class="md-content">
+			<div id='modal-wrap'>An error occured.</div>
+			<div class='modal-wrap'><a class='green-button' id='try-again'><span aria-hidden="true" class="icon-chevron-right"></span> &nbsp; Try Again</a></div>
+			<div id='close-modal'><a class='md-close'>Close</a></div>
+		</div>
+	</div>
+
+	<div class="md-modal md-effect-8" id="modal-temail">
+		<div class="md-content">
+			<div id='modal-wrap'>
+				<div id='temail-form'><input type='text' class='email-input' id='temail-input' placeholder='Your email...'><a class='green-button email-continue' id='temail-continue'><span aria-hidden="true" class="icon-chevron-right"></span> &nbsp; Submit</a></div>
+				<div id='temail-thanks'>Your file is on its way.</div>
+			</div>
+			<div id='close-modal'>You'll receive a zip file. <a class='md-close'>Close</a></div>
+		</div>
+	</div>
+
+	<div class="md-overlay"></div>
+
+</template>
+
+<template name='feature_grid'>
+	{{#each features}}
+		{{>reward_block}}
+	{{/each}}
+</template>
+
+<template name='reward_grid'>
+	{{#each rewards}}
+		{{>reward_block}}
+	{{/each}}
+</template>
+
+<template name='reward_block'>
+
+	<li class='feature-block' data-rid='{{this.id}}'>
+
+		<div class='tick'><span aria-hidden="true" class="icon-ok"></span></div>
+
+		<div class='block-title'>{{this.title}}</div>
+
+		<div class='block-subtitle'>{{this.subtitle}}</div>
+
+		<div class='block-description'>{{this.description}}</div>
+
+		<div class='block-backers'>{{format_num this.backers}} backers</div>
+
+		<div class='block-pledge'>
+
+			<div class='pledge-amount'>
+				<div class='dollar-sign'>$</div>
+				{{#if this.fixed}}
+					<input type='text' value='{{this.default_amount}}' class='dollar-amount fixed number' maxlength='3' disabled='disabled'>
+				{{else}}
+					<input type='text' value='{{this.default_amount}}' class='dollar-amount number' maxlength='3'>
+				{{/if}}
+			</div>
+
+			<div class='pledge-label'>PLEDGE</div>
+
+		</div>
+
+	</li>
+
+</template>

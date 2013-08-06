@@ -1,0 +1,487 @@
+global_width = 1010px
+bg_color = #f5fbff
+header_height = 60px
+
+our_blue = #21b3ed
+light_blue = #f4f9fc
+our_dark_blue = #202a33
+our_green = #27AE60
+our_red = #C0392B
+
+light_family = "HelveticaLight", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif
+				
+radius(r)
+	border-radius r
+
+body
+	background-color our_dark_blue
+	font-family "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif
+	padding-bottom 25px
+			
+a
+	cursor pointer
+	color our_blue
+	text-decoration none
+
+#global-wrap
+	margin 0 auto
+	width global_width
+	background-color #fff
+	padding-bottom 10px
+	radius(5px)
+
+#footer
+	font-size 10px
+	text-align center
+	color #ddd
+
+.green-button
+	padding 13px 18px 13px 18px
+	font-size 14px
+	color #fff
+	text-transform uppercase
+	background-color our_green
+	cursor pointer
+
+	&.small-button
+		padding 7px 10px 7px 10px
+		font-size 13px
+		radius(3px)
+
+
+#header-wrap
+	height header_height
+	position fixed
+	width global_width
+	background-color our_dark_blue
+	z-index 999
+	top 0
+	opacity 0.93
+
+	#logo-wrap
+		float left
+		width 400px
+		padding 10px
+
+		#logo
+			font-size 32px
+			color #fff
+			font-weight bold
+
+		#dollar-progress
+			font-size 24px
+			color #6e9cc9
+			margin-left 10px
+			font-family light_family
+
+			span
+				font-size 12px
+
+	ul#nav
+		float right
+		font-size 14px
+		color our_blue
+		text-align right
+		list-style-type none
+		overflow hidden
+		padding 20px
+		padding-right 0px
+
+		li
+			float right
+			margin-right 15px
+
+		.total-dollar-amount
+			margin-right 5px
+			font-weight bold
+
+
+#content-wrap
+	margin-top header_height
+	color #444
+
+	#tweet-button-wrap
+		text-align center
+		margin-bottom 20px
+		padding 10px
+		position relative
+		height 28px
+		background-color #1ca7ee
+		ul
+			list-style-type none
+			width 638px
+			margin 0 auto
+			li
+				float left
+				margin-right 10px
+			li:last-child
+				padding-top 6px
+			#tweet-button
+				left 10px
+			#tweet-text
+				right 12px
+				font-size 15px
+				color light_blue
+				font-family light_family
+	#narrow
+		width (global_width*2/3)
+		margin 0 auto
+		p
+			margin-top 15px
+
+	.content-block
+		margin 10px 0 20px 0
+		font-family light_family
+		text-align center
+
+		p
+			font-size 16px
+			line-height 24px
+			margin 20px
+
+		#ins
+			color #ebf0f5
+			background-color #3f5770
+			padding 20px
+			padding-top 15px
+			margin 0 auto
+			margin-top 20px
+			margin-bottom 25px
+			width (global_width*4/5)
+			radius(3px)
+			line-height 23px
+			font-family light_family
+
+			#hd
+				border-bottom 1px solid #4b6785
+				padding-bottom 10px
+				margin-bottom 20px
+				font-weight bold
+
+		#head-wrap
+			width (global_width*4/5)
+			margin 0 auto
+			
+
+			#main-header
+				font-size 42px
+				margin-bottom 15px
+				font-weight bold
+				letter-spacing -1px
+				color our_dark_blue
+
+			#sub-header
+				font-size 24px
+				color #999
+				margin-bottom 25px
+				font-family light_family
+
+			#sub-description
+				font-size 18px
+				color #b1b6ba
+				padding 25px
+				padding-bottom 10px
+
+		#about-wrap
+			img
+				width 170px
+				margin 10px
+
+		#top
+			margin 0 auto
+			padding 20px
+			line-height 24px
+			font-size 16px
+			width (global_width*4/7)
+			text-align center
+			color #b1b6ba
+
+		#screens
+			text-align center
+			img
+				width 420px
+				margin 10px
+				border 1px solid #ddd
+			
+
+	h1
+		padding 15px
+		font-size 32px
+		text-align center
+		border-bottom 1px solid #eee
+		margin-top 20px
+
+	h2
+		padding 10px 20px 0 20px
+		margin-top 25px
+		font-size 18px
+
+	ul.feature-grid
+		margin 0 auto
+		margin-bottom 30px
+		list-style-type none
+
+		li.feature-block
+			position relative
+			font-family light_family
+			font-size 14px
+			opacity 0.9
+			cursor pointer
+			border-bottom 1px solid #eee
+			text-align center
+			padding 30px
+			&:last-child
+				border-bottom none
+
+			&.selected
+				opacity 1
+				background-color our_blue
+				color light_blue
+				div
+					color light_blue
+				.tick
+					display normal
+				.block-pledge .pledge-amount 
+
+					.dollar-sign
+						color light_blue
+
+					input.dollar-amount
+						background transparent
+						color light_blue
+
+			&:not(.selected) .tick
+				display none
+
+			&:hover:not(.selected)
+				opacity 1
+
+			.tick
+				position absolute
+				bottom 10px
+				right 35px
+				font-size 72px
+				color #f7f7f7
+
+			.block-title
+				font-size 36px
+				color #444
+				margin-bottom 10px
+
+			.block-subtitle
+				font-size 32px
+				color #888
+				margin-bottom 20px
+
+			.block-description
+				font-size 16px
+				color #aaa
+				line-height 22px
+				margin 0 auto
+				width (global_width/2)
+				margin-bottom 30px
+
+			.block-backers
+				font-size 16px
+				color #888
+				margin-bottom 20px
+			
+			.block-pledge
+				width 150px
+				margin 0 auto
+				position relative
+				height 45px
+
+				.pledge-amount
+					position absolute
+					left 0
+
+					.dollar-sign
+						position absolute
+						left 5px
+						top 10px
+						font-size 16px
+						color #777
+
+					input
+						outline none
+						border none
+						font-family inherit
+						font-size 18px
+						width 62px
+						padding 5px
+						text-align center
+						color #666
+						font-weight bold
+						cursor text
+							
+				.pledge-label
+					position absolute
+					right 0
+					margin 2px 6px 0 5px
+					font-size 12px
+					text-transform uppercase
+					padding 11px
+					cursor pointer
+					color #fff
+					background-color our_blue
+					radius(2px)
+
+				
+
+
+/* modal */
+
+.md-modal {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	width: 50%;
+	width: 530px;
+	height: auto;
+	z-index: 2000;
+	visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-webkit-transform: translateX(-50%) translateY(-50%);
+	-moz-transform: translateX(-50%) translateY(-50%);
+	-ms-transform: translateX(-50%) translateY(-50%);
+	transform: translateX(-50%) translateY(-50%);
+	box-shadow: 0px 0px 30px #eee;
+}
+
+.md-show {
+	visibility: visible;
+}
+
+.md-overlay {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	visibility: hidden;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	opacity: 0;
+	background: rgba(255, 255, 255, 0.8)
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.md-show ~ .md-overlay
+	opacity 1
+	visibility visible
+
+.md-content
+	color #666
+	background #fff
+	border 1px solid #ddd
+	position relative
+	border-radius 3px
+	margin 0 auto
+	padding 20px
+
+	#modal-wrap
+		text-align center
+		color #888
+
+		input.email-input
+			outline none
+			border 1px solid transparent
+			border-bottom 1px solid #ddd
+			font-family inherit
+			font-size 18px
+			width 300px
+			padding 8px
+			color inherit
+			&.invalid
+				border 1px solid our_red
+
+			&#free-amount
+				width 40px
+				margin-bottom 10px
+				text-align center
+
+		a.email-continue
+			margin-left 10px
+			margin-top 20px
+
+		a#try-again
+			margin-top 15px
+			margin-bottom 15px
+
+		#temail-thanks
+			border-bottom 1px solid #ddd
+			padding 10px
+			display none
+
+	#close-modal
+		padding-top 15px
+		text-align center
+		a
+			color #aaa
+			font-size 13px
+
+
+
+/* Effect: 3D flip horizontal */
+.md-effect-8.md-modal {
+	-webkit-perspective: 1300px;
+	-moz-perspective: 1300px;
+	perspective: 1300px;
+}
+
+.md-effect-8 .md-content {
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-transform: rotateY(-70deg);
+	-moz-transform: rotateY(-70deg);
+	-ms-transform: rotateY(-70deg);
+	transform: rotateY(-70deg);
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+	opacity: 0;
+}
+
+.md-show.md-effect-8 .md-content {
+	-webkit-transform: rotateY(0deg);
+	-moz-transform: rotateY(0deg);
+	-ms-transform: rotateY(0deg);
+	transform: rotateY(0deg);
+	opacity: 1;
+}
+
+
+/* Green button Flash effect */
+.animated{-webkit-animation-fill-mode:both;-moz-animation-fill-mode:both;-ms-animation-fill-mode:both;-o-animation-fill-mode:both;animation-fill-mode:both;-webkit-animation-duration:0.5s;-moz-animation-duration:0.5s;-ms-animation-duration:0.5s;-o-animation-duration:0.5s;animation-duration:0.5s;}
+
+@-webkit-keyframes flash {
+	0%, 50%, 100% {opacity: 1;}	25%, 75% {opacity: 0;}
+}
+
+@-moz-keyframes flash {
+	0%, 50%, 100% {opacity: 1;}	
+	25%, 75% {opacity: 0;}
+}
+
+@-o-keyframes flash {
+	0%, 50%, 100% {opacity: 1;}	
+	25%, 75% {opacity: 0;}
+}
+
+@keyframes flash {
+	0%, 50%, 100% {opacity: 1;}	
+	25%, 75% {opacity: 0;}
+}
+
+.flash {
+	-webkit-animation-name: flash;
+	-moz-animation-name: flash;
+	-o-animation-name: flash;
+	animation-name: flash;
+}
+
