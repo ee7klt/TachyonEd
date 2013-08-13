@@ -24,7 +24,7 @@ Meteor.startup ->
 			document.getElementById('tweet-button')
 			(el) ->
 				console.log 'button created'
-			{text: 'Learn better. Retain more. Have fun. Take notes with Onote, the note-taking app for online education.', size:'large', count:'none'}
+			{text: 'Learn Physics the right way. Go where no class has gone before. Better exam results start here. ', size:'large', count:'none'}
 		)
 
 		twttr.events.bind('tweet', handleTweet)
@@ -34,6 +34,9 @@ Meteor.startup ->
 ###
 (Helper) Functions
 ###
+
+
+
 
 #Validates email string
 valid_email = (email) ->
@@ -264,6 +267,9 @@ Template.reward_grid.rewards = ->
 	Rewards.find( { type: 'reward'}, { sort: { default_amount: 1 } } )
 
 
+
+
+
 ###
 Template Helpers
 ###
@@ -271,3 +277,5 @@ Handlebars.registerHelper('format_num', (num) ->
 	if num
 		num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
 )
+
+

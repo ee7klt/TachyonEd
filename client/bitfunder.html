@@ -1,7 +1,9 @@
 <head>
-  <title>bitfunder</title>
+  <title>TachyonEd</title>
 
-  <link rel="stylesheet" href="/icons.css" type="text/css" />
+ 
+  <!--<link href="client/stylesheets/bootstrap.min.css" rel="stylesheet" media="screen">-->
+   <link rel="stylesheet" href="/icons.css" type="text/css" />
   <script src="https://checkout.stripe.com/v2/checkout.js"></script>
 
 </head>
@@ -9,8 +11,12 @@
 <body>
 	<div id='global-wrap'>
 		{{> global}}
+		
 	</div>
 
+
+
+	   <!--<script src="client/stylesheets/bootstrap.min.js"></script>-->
 </body>
 
 <template name="global">
@@ -19,12 +25,13 @@
 
 	{{>header}}
 
+
 	<div id='content-wrap'>
 
 			<div id='tweet-button-wrap'>
 				<ul>
 					<li><span id='tweet-button'></span></li>
-					<li><span id='tweet-text'>Hey! You can tweet this to receive this crowdfunder's full documented source code.</span></li>
+					<li><span id='tweet-text'>Hey! Share the love. Physics is more fun together. Tweet this for a better tomorrow.</span></li>
 				</ul>
 			</div>
 
@@ -32,61 +39,67 @@
 
 				<div id='head-wrap'>
 
-					<div id='main-header'>Learning should be fun. Seriously.</div>
+					<div id='main-header'>Physics: The Final Frontier</div>
 
 					<div id='sub-header'>
-						Introducing note-taking for the online education era.
+						Introducing the radically personalized approach to Physics exam preparation.
 					</div>
 
-					<div id='about-wrap'>
-						<a href='https://www.stanford.edu' target='_new'><img src='https://i.imgur.com/yYhH7cs.png'></a>
-						<a href='https://www.coursera.org' target='_new'><img src='https://i.imgur.com/UDigsxr.png'></a>
-					</div>
 
 					<div id='sub-description'>
-						Let's stop pretending we remember everything.
+						Go where no class has ever gone before. Go beyond your imagination.
 					</div>
 
 				</div>
 
 				<div id='top'>
 
-						<a href='https://onote.herokuapp.com' target='_new'>Onote</a> is a note-taking and course management platform for online students that works on all devices. It was built as part of the Stanford/Coursera  <a href='https://class.coursera.org/startup-001/class/index' target='_new'>Startup Engineering</a> course. With Onote, you can already take synchronized notes on video lectures, review them, share them, and see what notes others are taking. <br>And with your help, we can make it do so much more.
+								Do you need expert help preparing for a major high-school Physics exam?
+			Look no further. Sign-up to get first access to subscriber-only videos
+			and lock in priority scheduling for on-demand tutoring via Skype or Google+
+			throughout the duration of your course.
 
 				</div>
 
-				<div id='screens'>
+				<!--<div id='screens'>
 
 					<a href='https://i.imgur.com/ARWQynQ.png' target='_new'><img src='https://i.imgur.com/ARWQynQ.png'></a>
 					
 					<a href='https://i.imgur.com/kIxbbK2.png' target='_new'><img src='https://i.imgur.com/kIxbbK2.png'></a>
 
-				</div>
+				</div>-->
 
-				<h1>Roadmap</h1>
+				<h1>Options</h1>
 
 				<div id='ins'>
 					<div id='hd'>Click on any feature below to back it.</div> 
-					You'll be recognized as a Feature Contributor on the About Page for showing your support. <br>Contributing $49 or more makes you a Feature Owner too — you'll be recognized and get early beta access.
+					You'll be recognized as a Feature Contributor on the About Page for showing your support. <br>Contributing $199 or more makes you a Feature Owner too — you'll be recognized and get early beta access.
 				</div>
 
 				<ul class='feature-grid'>
 					{{> feature_grid}}
 				</ul>
 
-				<h1>More Rewards</h1>
+				<!--<h1>More Rewards</h1>-->
 
 				<ul class='feature-grid'>
 					{{> reward_grid}}
-				</ul>
+				</ul> 
 
 
-				<h1>Product Analysis</h1>
+
+				<h1>Topic Coverage</h1>
+
+				<p> If the project meets or exceeds the funding goal, the lectures will be released periodically starting the 1st of October 2013 onwards. Personalized coaching is available from the 1st of October 2013 onwards for those who backed the feature. Below are the topics to be covered.</p>
+
+
 
 				<div id='narrow'>
 
-					<h2>Do people take notes?</h2>
-					<p>Note-taking is a type of involved learning. It helps transcribe short-term memory to long-term memory and is useful for later review and better grades. Evernote and other note-taking applications have proven that note-taking is a popular activity.</p>
+					<h2>Core Topics</h2>
+					<p>These include topics common to most University entrance examinations, including the A-Levels, IB Baccalaureate, SAT II Subject Test and the AP B Physics</p>
+
+					{{> accordion}}
 
 					<h2>Exactly what problem does Onote solve? (value proposition)</h2>
 					<p>As online education grows at exponential rates, video has clearly proven itself as the medium of choice to both teach and learn. Onote aims to enrich video lectures by providing a platform where students can take synchronized notes, share them, review them, ask and answer questions, search lectures, and manage and discover courses.</p>
@@ -118,7 +131,10 @@
 
 			</div>
 
+
+
 	</div>
+
 
 
 </template>
@@ -129,8 +145,8 @@
 
 		<div id='logo-wrap'>
 
-			<span id='logo'>Onote</span>
-			<span id='dollar-progress'>${{format_num total_pledged}}<span> pledged of $100,000 goal</span></span>
+			<span id='logo'>TachyonEd</span>
+			<span id='dollar-progress'>${{format_num total_pledged}}<span> pledged of $10,000</span></span>
 
 		</div>
 
@@ -262,3 +278,47 @@
 	</li>
 
 </template>
+
+
+<template name="accordion">
+	<div class="accordion" id="accordion2">
+  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+        Collapsible Group Item #1
+      </a>
+    </div>
+    <div id="collapseOne" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        ...
+      </div>
+    </div>
+  </div>
+  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+        Collapsible Group Item #2
+      </a>
+    </div>
+    <div id="collapseTwo" class="accordion-body collapse">
+      <div class="accordion-inner">
+        ...
+      </div>
+    </div>
+  </div>
+  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
+        Collapsible Group Item #3
+      </a>
+    </div>
+    <div id="collapseThree" class="accordion-body collapse">
+      <div class="accordion-inner">
+        ...
+      </div>
+    </div>
+  </div>
+</div>
+</template>
+
+
