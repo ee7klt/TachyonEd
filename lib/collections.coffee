@@ -2,5 +2,5 @@
 @Pledges = new Meteor.Collection('pledges')
 
 #Your Stripe publishable and secret keys. Visit Stripe.com for more info
-@api_key = 'pk_live_publishablekeyhere'
-@api_key_secret = 'sk_live_secrretkeyhere'
+@api_key = 'pk_test_zFB2D48B85WTRh5ZM0akXfRZ'
+@api_key_secret = 'sk_test_9A5abOOit18zORBpyw7zYMdR'
